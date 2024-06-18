@@ -1,37 +1,31 @@
-# Customer Segmentation using K-Means Clustering
+# PRODIGY_ML_01
+Prodigy Machine Learning Internship Task 1
 
-Customer segmentation is the process of grouping a company's customers using shared characteristics so that the company can cater to each group effectively and appropriately. Machine learning models can process customer data and discover patterns difficult to spot through intuition and manual examination of data. K-means clustering is an unsupervised machine learning algorithm that uses an iterative process to divide an unlabeled dataset into k different clusters in such a way that each dataset belongs only to one group that has similar properties.
+Create a K-means clustering algorithm to group customers of a retail store based on their purchase history.
+
+Dataset Link: https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python
 
 # Summarizing the k-means algorithm
 
-<pre>
-randomly choose k examples as initial centroids
-while true:
-  create k clusters by assigning each example to closest centroid
-  create k new centroids by averaging examples in each cluster
-  if centroids don't change:
-    break
-</pre>
+K-means clusters data by iteratively assigning points to the nearest centroid and updating centroids to minimize the within-cluster sum of squares, aiming to partition the data into \( k \) clusters based on Euclidean distance.
 
 # Notebook Summary
 
-<pre>
-1. Importing necessary libraries
-  set os.environ["OMP_NUM_THREADS"] = '1' to avoid multiple warnings in latter stages
-2. Importing and viewing the dataset
-  use pandas dataframe to view the dataset's quantity, available features, datatypes, and check for null values
-3. Data Visualization
-  (a) Distribution plots (histplots)
-    checking densities of age, annual income, and spending
-  (b) Categorical plots (violinplots)
-    checking densities of age, annual income, and spending across genders
-  (c) Relational plots (scatterplot)
-    checking variation of spending with annual income
-4. Finding Optimum no. of clusters
-  use elbow method to find optimal no. of groups the model can create based on:
-  (a) age and spending
-  (b) annual income and spending
-  (c) age, annual income, and spending
-5. Plotting the clusters using optimal k
-  use 2d and 3d plots to visualize clusters using optimal characteristics obtained in previous step
-</pre>
+## 1. Data Preparation
+
+- using pandas to read csv file and view dataset shape and columns
+- create new dataset using relevant features and target variable for the present task
+
+## 2. Data Visualization
+
+- check datatypes in case there is need for encoding categorical values
+- check for missing values and duplicate rows
+- use violin plots to visualize data for density
+
+## 3. Finding optimum number of clusters
+
+- Use elbow method to find the optimum number of clusters for each group set
+
+## 4. Plotting Clusters using Optimal K
+
+- plot 2D and 3D graphs for K-means clustering and find the different groups of people
